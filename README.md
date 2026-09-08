@@ -210,25 +210,25 @@ Insert the final measured values below once the complete experimental runs have 
 
 ### Label Efficiency
 
-![Label efficiency curve](outputs/plots/label_efficiency_curve.png)
+![Label efficiency curve](results/plots/label_efficiency_curve.png)
 
 The label-efficiency experiment compares self-supervised, ImageNet-pretrained, and from-scratch representations across different labeled-data budgets.
 
 ### Semi-Supervised Learning
 
-![Semi-supervised comparison](outputs/plots/semi_supervised_comparison_1pct.png)
+![Semi-supervised comparison](results/plots/semi_supervised_comparison_1pct.png)
 
 The semi-supervised experiment evaluates whether confidence-thresholded pseudo-labeling provides additional benefit when only 1% of the training data are labeled.
 
 ### Embedding Structure
 
-![Embedding clusters](outputs/plots/embedding_clusters_vs_labels.png)
+![Embedding clusters](results/plots/embedding_clusters_vs_labels.png)
 
 Frozen SSL embeddings are analyzed using clustering to assess whether meaningful class structure emerges without supervised fitting.
 
 ### Qualitative Analysis
 
-![Grad-CAM overlays](outputs/plots/gradcam_overlays.png)
+![Grad-CAM overlays](results/plots/gradcam_overlays.png)
 
 Grad-CAM visualizations provide qualitative evidence of the spatial regions used by the downstream classifier.
 
