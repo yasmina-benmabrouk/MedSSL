@@ -1,0 +1,2 @@
+silhouette_score,cluster_purity,gmm_mean_log_likelihood,anomaly_threshold_distance,n_anomalies
+0.1879875,0.48875,11752.7776727521,0.24467878,40

@@ -130,22 +130,10 @@ The labeled subsets are generated from the non-test training pool.
 | Encoder | ResNet-50 | 25.6M | SimCLR representation learning |
 | Classification head | `Linear(2048, 4)` | 8.2K | Downstream 4-class classification |
 
-The SSL encoder is initialized with:
-
-```python
-weights=None
-```
-
-and trained from scratch.
 
 ### ImageNet baseline
 
-An ImageNet-pretrained ResNet-50 is included as a controlled baseline:
-
-```python
-weights=IMAGENET1K_V2
-```
-
+An ImageNet-pretrained ResNet-50 is included as a controlled baseline.
 This allows comparison between:
 
 - training from scratch,
@@ -270,35 +258,6 @@ configs/simclr_resnet50.yaml
 | Max pseudo-labels/class/round | 200 | Limits confirmation-bias amplification |
 
 The YAML configuration is the intended **single source of truth** for experiment parameters.
-
----
-
-
-## Reproducibility
-
-The experiment uses fixed random seeds and a deterministic experimental protocol wherever supported.
-
-For reproducibility, the following should be kept fixed:
-
-- dataset version,
-- train/test split,
-- labeled-data fractions,
-- random seed,
-- model architecture,
-- preprocessing,
-- augmentation configuration,
-- evaluation metric,
-- test set.
-
-### Recommended multi-seed evaluation
-
-The current implementation is designed around a fixed seeded experiment. For stronger statistical reliability, future experiments should repeat the complete evaluation across multiple independent seeds and report:
-
-```text
-mean ± standard deviation
-```
-
-rather than relying on a single run.
 
 ---
 
