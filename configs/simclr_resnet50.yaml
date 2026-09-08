@@ -1,0 +1,68 @@
+# Reference config for MedSSL's SimCLR pretraining + downstream label-efficiency grid.
+# The notebook's CFG cell (notebooks/representation_learning_kaggle.ipynb) is the source of truth
+# for v1.0 -- this file documents the same values for a future CLI.
+# Sized for a single NVIDIA T4 (16 GB VRAM), the free Kaggle GPU tier.
+
+# Data
+data_dir: /kaggle/input/covid19-radiography-database
+output_dir: /kaggle/working/outputs
+seed: 42
+class_names: [COVID, Lung_Opacity, Normal, "Viral Pneumonia"]
+image_size: 224
+
+# Splits
+test_frac: 0.10
+val_frac: 0.10            # reserved, not used in v1.0 -- mirrors MedFT's convention
+max_test_samples: 800      # the test set is re-embedded ~11x across the notebook; capped for single-session runtime
+label_fractions: [0.01, 0.10, 1.00]
+min_labels_per_class: 5    # floor at the 1% fraction, protects the rarest class from a zero-example split
+
+# Backbone
+backbone: resnet50
+pretrained_imagenet_weights: IMAGENET1K_V2   # ONLY the ImageNet-baseline condition uses this
+
+# Track A -- SimCLR pretraining
+pretrain_pool_size: 6000     # capped subset of the unlabeled dev pool -- feasibility, not fidelity
+pretrain_epochs: 15
+simclr_batch_size: 128        # T4 VRAM ceiling for ResNet-50 @ 224px with 2 augmented views/image
+projection_hidden_dim: 2048
+projection_output_dim: 128
+temperature: 0.1              # SimCLR paper's grid-searched NT-Xent optimum
+pretrain_lr: 3.0e-4
+pretrain_weight_decay: 1.0e-6
+warmup_frac: 0.1
+use_horizontal_flip: false    # CXR laterality caveat -- toggle for ablation, see docs/methodology.md
+
+# Augmentation (Track A pretraining views only)
+random_resized_crop_scale_min: 0.5   # narrower floor than natural-image SimCLR's 0.08 -- keeps diagnostic content in both views
+rotation_degrees: 10
+brightness_jitter: 0.15
+contrast_jitter: 0.15
+gaussian_blur_prob: 0.5
+gaussian_noise_prob: 0.3
+
+# Downstream protocol
+downstream_conditions: [ssl_linear_probe, imagenet_linear_probe, from_scratch_supervised]
+linear_probe_epochs: 20
+linear_probe_lr: 1.0e-3
+from_scratch_epochs: 30
+from_scratch_lr: 1.0e-4
+
+# Track B -- semi-supervised (confidence-thresholded pseudo-labeling)
+semi_supervised_label_fraction: 0.01
+warm_start_epochs: 10
+pseudo_label_confidence_threshold: 0.95
+pseudo_label_rounds: 2
+max_pseudo_labels_per_class_per_round: 200
+unlabeled_pool_size_for_pseudo_labeling: 6000
+semi_supervised_epochs_per_round: 10
+
+# Track C -- unsupervised (clustering + anomaly detection)
+n_clusters: 4
+umap_n_neighbors: 15
+umap_min_dist: 0.1
+anomaly_percentile: 95
+
+# Visualization / evaluation
+plot_dpi: 150
+gradcam_target_layer: layer4

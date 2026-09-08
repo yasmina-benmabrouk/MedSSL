@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 780" role="img" aria-label="Diagram of the MedSSL pipeline: the COVID-19 Radiography Database is split into a fixed held-out test set and an unlabeled dev pool; a ResNet-50 encoder is self-supervised pretrained with SimCLR on the dev pool to produce a single checkpoint; that checkpoint is then reused, reloaded fresh from disk, in three tracks -- a label-efficiency grid of linear-probe and from-scratch baselines, a semi-supervised pseudo-labeling fine-tune at 1 percent labels, and unsupervised k-means and GMM clustering with post-hoc validation -- and every track is scored on the same held-out test split." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyM2FlN2Y0Yy00ZDgzLTQyZmUtODAwNy1iMDY5YjVlYTlmMDEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJAZInet76OA5hnzDHk+ns0AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjZjVjZDYzZC01OTk1LTQyOTktYTYxNi0wNmNjNDczYjA4N2RscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNosTGdaB0E2tl4QszJsZzq4AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggNdo8BmF2ORVNkv69ZRzyHPH8EwzPckh1cFNzuiDDW6CkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaG1LYwb/Qs1u7NyivWH+REMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIPXDaPoMAFtkQrUTuI2mlAeyYT+E3HEHiQYJcNxqNyr3ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQLeZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjIzYWU3ZjRjLTRkODMtNDJmZS04MDA3LWIwNjliNWVhOWYwMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmVjOTVkYjk0LWEyMzgtNGEyMC1hMzI4LWJhMDBiN2U0ZGQ0YXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA12jwGYXY5FU2S/r1lHPIc8fwTDM9ySHVwU3O6IMNboKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXw7WLP2M11624Xj5I90/k5MP5Dku906hHHzMDv3omz2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggIeRWr2IdyKHxE4g3Y08lVhvDbEqc6VWvHmVV9KcMgc10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPfsWHYUSW50V5Ge6ofryrTy7+nykmjy87V3VUBAcLP5247wrqUmyyw5YeIChCHynFLP/gCGXAgQfS4q1EPXFXM=</c2pa:manifest></metadata>
+  <title>MedSSL Method Overview</title>
+  <desc>The COVID-19 Radiography Database (21,165 images, 4 classes) is split, seeded, into a fixed held-out test set (labels kept, reused by every track) and an unlabeled dev pool. A ResNet-50 encoder is self-supervised pretrained on the dev pool with SimCLR (NT-Xent loss), producing a single pretrained checkpoint. That checkpoint is the shared starting point for three tracks, each reloading it fresh from disk: (2a) a label-efficiency grid comparing SSL, ImageNet-pretrained, and from-scratch conditions at 1/10/100% labels, producing the label-efficiency curve; (2b) semi-supervised fine-tuning via confidence-thresholded pseudo-labeling at 1% labels, compared against the same-fraction baselines; (2c) frozen-embedding k-means/GMM clustering and anomaly detection, validated post-hoc against true labels, visualized as a cluster-vs-true-label UMAP scatter. Every outcome is scored on the same seeded, held-out test split.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1740" height="780" fill="#ffffff"/>
+
+  <text x="870" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#111827">MedSSL — Method Overview</text>
+  <text x="870" y="50" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#4b5563">One shared ResNet-50 encoder, three learning paradigms (self-supervised · semi-supervised · unsupervised)</text>
+
+  <!-- Data source (violet) -->
+  <rect x="20" y="330" width="190" height="110" rx="8" fill="#fdeef3" stroke="#d6547e" stroke-width="1.5"/>
+  <text x="115" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" fill="#8a1f4a">COVID-19 Radiography DB</text>
+  <text x="115" y="382" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#a13a5f">21,165 images</text>
+  <text x="115" y="402" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">4 classes (COVID / Lung_Opacity /</text>
+  <text x="115" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">Normal / Viral Pneumonia)</text>
+
+  <!-- fork label -->
+  <text x="238" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6b7280">stratified, seeded split</text>
+  <text x="238" y="273" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6b7280">(seed = 42) — test held out first</text>
+
+  <!-- fork arrows: data -> test split, data -> dev pool -->
+  <path d="M210,385 L260,165" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M210,385 L260,655" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Test split box (violet) -->
+  <rect x="260" y="110" width="220" height="110" rx="8" fill="#fdeef3" stroke="#d6547e" stroke-width="1.5"/>
+  <text x="370" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#8a1f4a">Held-out test split</text>
+  <text x="370" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">fixed, seeded, capped (n ≤ 800)</text>
+  <text x="370" y="178" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">labels kept — never used in</text>
+  <text x="370" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">Track A / Track B training</text>
+
+  <!-- Dev pool box (violet) -->
+  <rect x="260" y="600" width="220" height="110" rx="8" fill="#fdeef3" stroke="#d6547e" stroke-width="1.5"/>
+  <text x="370" y="630" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#8a1f4a">Unlabeled dev pool</text>
+  <text x="370" y="650" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">labels ignored for Track A</text>
+  <text x="370" y="668" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">also feeds 1% / 10% / 100%</text>
+  <text x="370" y="686" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#a13a5f">labeled subsets (Steps 12–14)</text>
+
+  <!-- dev pool -> Track A pretraining -->
+  <path d="M480,655 L520,655" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Track A pretraining box (teal, persistent-model style) -->
+  <rect x="520" y="600" width="250" height="110" rx="10" fill="#fbdce9" stroke="#c2185b" stroke-width="2"/>
+  <text x="645" y="630" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="700" fill="#7a0f3f">ResNet-50 encoder</text>
+  <text x="645" y="652" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#93244f">SimCLR pretraining (NT-Xent loss)</text>
+  <text x="645" y="672" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#93244f">batch 128 · pool 6,000 · 15 epochs</text>
+  <text x="645" y="690" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#93244f">(capped for single-session T4)</text>
+
+  <!-- Track A -> checkpoint (vertical) -->
+  <path d="M645,600 L645,440" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="700" y="505" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#1f2937">1. self-supervised</text>
+  <text x="700" y="519" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#4b5563">pretraining (Step 8)</text>
+
+  <!-- Checkpoint box (teal, highlighted: the shared persistent artifact) -->
+  <rect x="520" y="330" width="250" height="110" rx="10" fill="#fbdce9" stroke="#c2185b" stroke-width="2.5"/>
+  <text x="645" y="364" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#7a0f3f">Pretrained encoder checkpoint</text>
+  <text x="645" y="386" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#93244f">the single shared starting point</text>
+  <text x="645" y="404" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#93244f">reloaded fresh from disk for</text>
+  <text x="645" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#93244f">Tracks B and C (Step 9)</text>
+
+  <!-- fan-out arrows: checkpoint -> three track boxes -->
+  <path d="M770,385 L1020,165" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M770,385 L1020,385" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M770,385 L1020,655" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="875" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#1f2937">2a. linear probe</text>
+  <text x="875" y="259" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#4b5563">@ 1/10/100% labels (Steps 12–15)</text>
+
+  <text x="875" y="362" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#1f2937">2b. fine-tune + pseudo-labeling</text>
+  <text x="875" y="376" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#4b5563">@ 1% labels (Steps 16–18)</text>
+
+  <text x="875" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#1f2937">2c. frozen embeddings,</text>
+  <text x="875" y="514" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#4b5563">no gradient (Steps 19–21)</text>
+
+  <!-- col4: three task boxes (amber) -->
+  <rect x="1020" y="110" width="230" height="110" rx="8" fill="#fce3ed" stroke="#ad1457" stroke-width="1.5"/>
+  <text x="1135" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" fill="#6a0f38">Label-efficiency grid</text>
+  <text x="1135" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">SSL vs. ImageNet vs. from-scratch</text>
+  <text x="1135" y="178" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">linear probe / full training</text>
+  <text x="1135" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">3 fractions × 3 conditions = 9 runs</text>
+
+  <rect x="1020" y="330" width="230" height="110" rx="8" fill="#fce3ed" stroke="#ad1457" stroke-width="1.5"/>
+  <text x="1135" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" fill="#6a0f38">Semi-supervised fine-tuning</text>
+  <text x="1135" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">warm start + 2 pseudo-label rounds</text>
+  <text x="1135" y="398" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">1% labeled + confidence-</text>
+  <text x="1135" y="416" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">thresholded pseudo-labeled pool</text>
+
+  <rect x="1020" y="600" width="230" height="110" rx="8" fill="#fce3ed" stroke="#ad1457" stroke-width="1.5"/>
+  <text x="1135" y="630" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="700" fill="#6a0f38">Clustering + anomaly detection</text>
+  <text x="1135" y="650" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">k-means(4) / GMM(4) on</text>
+  <text x="1135" y="668" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">L2-normalized embeddings</text>
+  <text x="1135" y="686" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#82294f">distance-to-centroid outliers</text>
+
+  <!-- col4 -> col5 arrows -->
+  <path d="M1250,165 L1400,165" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M1250,385 L1400,385" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M1250,655 L1400,655" fill="none" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- col5: three outcome boxes (rose) -->
+  <rect x="1400" y="80" width="310" height="170" rx="10" fill="#fddbe9" stroke="#e91e63" stroke-width="1.5"/>
+  <text x="1555" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" fill="#7a0f3f">Label-efficiency curve</text>
+  <text x="1555" y="137" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">mean one-vs-rest AUROC vs.</text>
+  <text x="1555" y="155" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">% labels used — the headline figure</text>
+  <text x="1555" y="173" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">(Step 15)</text>
+  <text x="1555" y="191" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">scored on the held-out test split</text>
+
+  <rect x="1400" y="300" width="310" height="170" rx="10" fill="#fddbe9" stroke="#e91e63" stroke-width="1.5"/>
+  <text x="1555" y="335" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" fill="#7a0f3f">Semi-supervised result @ 1%</text>
+  <text x="1555" y="357" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">AUROC vs. the same-fraction</text>
+  <text x="1555" y="375" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">SSL / ImageNet / from-scratch points</text>
+  <text x="1555" y="393" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">(Step 18 bar comparison)</text>
+  <text x="1555" y="411" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">scored on the held-out test split</text>
+
+  <rect x="1400" y="570" width="310" height="170" rx="10" fill="#fddbe9" stroke="#e91e63" stroke-width="1.5"/>
+  <text x="1555" y="605" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" fill="#7a0f3f">Silhouette · purity · anomalies</text>
+  <text x="1555" y="627" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">computed post-hoc only —</text>
+  <text x="1555" y="645" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9c2a57">never used to fit the clusters</text>
+  <text x="1555" y="663" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">cluster-vs-true-label UMAP scatter (Step 21)</text>
+  <text x="1555" y="681" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b5527a">scored on the held-out test split</text>
+
+  <!-- bottom annotation -->
+  <text x="870" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#6b7280">Every outcome (right column) is scored on the same seeded, held-out test split — never used in Track A or Track B training.</text>
+</svg>
